@@ -1,0 +1,9 @@
+img {
+    object-fit: contain;
+    height: 800px;
+    width: 100%;
+}
+
+:host::ng-deep .slide {
+    margin-top: 50px;
+}

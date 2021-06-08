@@ -1,0 +1,26 @@
+<div class="container mt-5">
+    <div class="row" *ngIf="product">
+        <div class="col-6 image">
+            <img src="{{product.pictureUrl}}" alt="{{product.name}}" class="img-fluid w-100">
+        </div>
+        <div class="col-6">
+            <h5 style="color: #f47421;">{{product.name}}</h5>
+            <p>{{product.price | currency:'EUR': 'symbol'}}</p>
+            <div class="d-flex justify-content-start align-items-center">
+                <div class="increase">
+                    <i class="fa fa-minus-circle addRemove" (click)='decrementQuantity()'></i>
+                    <span class="font-wight-bold" style="font-size: 28px;">{{quantity}}</span>
+                    <i class="fa fa-plus-circle addRemove" (click)='incrementQuantity()'></i>
+                </div>
+                <button class="btn btn-outline-secondary btn-lg" (click)="addItemToCart()">Add to Cart</button>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12 ml-3">
+                {{product.decription}}
+            </div> 
+        </div>
+    </div>
+</div>
+
+

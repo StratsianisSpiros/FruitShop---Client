@@ -1,0 +1,18 @@
+.sectionHeader {
+    background-color: #e7f0f7;
+}
+
+:host::ng-deep .xng-breadcrumb-root {
+    padding: 8px 16px;
+    display: inline;
+    border-radius: 0;
+}
+
+:host::ng-deep label.xng-breadcrumb-trail {
+    margin-bottom: 0;
+    color: #f47421;
+}
+
+:host::ng-deep .xng-breadcrumb-separator {
+    padding: 0 0;
+}

@@ -1,0 +1,27 @@
+<div class="form-label-group mb-2">
+    <label for="{{label}}" class="sr-only">{{label}}</label>
+    <input 
+        [ngClass]="(controlDir && controlDir.control && controlDir.control.touched) 
+                    ? !controlDir.control.valid ? 'is-invalid' : 'is-valid' : null"
+        [type]="type"
+        (input)="onChange($event.target.value)"
+        (blur)="onTouched()"
+        id={{label}}
+        #input
+        class="form-control" 
+        placeholder="{{label}}"
+    >
+    <!-- <span class="fa fa-spinner fa-spin loader mr-2 mb-2 float-right" *ngIf="controlDir && controlDir.control && controlDir.control.status === 'PENDING'"></span> -->
+    <div class="orange mt-2" *ngIf="controlDir && controlDir.control && !controlDir.control.valid && controlDir.control.touched">
+        <span *ngIf="controlDir.control.errors?.required">{{label}} is required</span>
+        <span *ngIf="controlDir.control.errors?.pattern && label.includes('Name')">{{label}} must contain only letters and first letter has to be capital<br></span>
+        <span *ngIf="controlDir.control.errors?.pattern && !label.includes('Name')">{{label}} is invalid<br></span>
+        <span *ngIf="controlDir.control.errors?.maxlength">{{label}} is too long<br></span>
+    </div>
+    
+    <div class="orange mt-2" *ngIf="(controlDir && controlDir.control && !controlDir.control.valid && controlDir.control.touched)">
+        <span *ngIf="controlDir.control.errors?.emailExist">
+            Email address is in use
+        </span>
+    </div>
+</div>

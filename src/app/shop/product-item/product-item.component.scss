@@ -1,0 +1,32 @@
+.btn {
+    width: 30%;
+    height: 40px;
+}
+
+.btn-outline-primary {
+    border-color: #76c143;
+    color: gray;
+}
+
+.btn-outline-primary:hover {
+    background-color: #76c143;
+    color: black;
+}
+
+.btn-outline-secondary {
+    border-color:#79b9e7;
+    color: gray;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #79b9e7;
+    color: black;
+}
+
+.card {
+    background: #e7f0f7;
+}
+
+.image :hover {
+    opacity: 1;
+}

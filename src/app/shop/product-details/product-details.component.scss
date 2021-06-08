@@ -1,0 +1,31 @@
+.addRemove {
+    cursor: pointer;
+    font-size: 2em;
+    color: #ffc120;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.increase {
+    border-color: #79b9e7;
+    border-width: 2px;
+    border-style: solid;
+    background-color: #e7f0f7;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.image {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #79b9e7;
+}
+
+.btn-outline-secondary {
+    background-color: #e7f0f7;
+    border-color: #79b9e7;
+
+    &:hover {
+        background-color: #79b9e7;
+    }
+}

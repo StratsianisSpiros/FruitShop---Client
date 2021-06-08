@@ -1,0 +1,15 @@
+<div class="card h-100 box-shadow">
+    <div class="h-100 image">
+        <img src="{{product.pictureUrl}}" alt="{{product.name}}" class="img-fluid mt-5 w-100">
+    </div>
+    <div class="d-flex align-items-center justify-content-center hover-overlay">
+        <button type="button" class="btn btn-outline-primary fa fa-shopping-cart mr-2" (click)="addItemToBasket()"></button>
+        <button type="button" class="btn btn-outline-secondary" routerLink="/shop/{{product.id}}">View</button>
+    </div>
+    <div class="card-body d-flex flex-column">
+        <a>
+            <h6 class="text-uppercase" style="color: #f47421;">{{product.name}}</h6>
+        </a>
+        <span class="mb-2" style="color:#007dc6;">{{product.price | currency: 'EUR': 'symbol'}}</span>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+:host::ng-deep .pagination .page-item .page-link {
+    background:#e7f0f7 !important;
+    color: black;
+    border-radius: 20px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+:host::ng-deep .pagination .page-item.active .page-link {
+    background-color: #007dc6 !important;
+    color: #e7f0f7;
+}
+
+:host::ng-deep .pagination .page-item .page-link:hover {
+    background-color: #79b9e7 !important;
+}
+
